@@ -196,7 +196,7 @@ task-manager/
 │   └── server.js          # Server setup
 ├── frontend/
 │   ├── src/
-│   │   ├── components/     # React components (TaskManager, Login, Register)
+│   │   ├── components/     # React componentthe s (TaskManager, Login, Register)
 │   │   ├── api/            # API functions for task and auth
 │   │   ├── App.js          # Main React component
 │   │   └── index.js        # ReactDOM entry point
