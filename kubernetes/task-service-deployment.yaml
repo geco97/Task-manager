@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: task-service
+  template:
+    metadata:
+      labels:
+        app: task-service
+    spec:
+      containers:
+        - name: task-service
+          image: geco97/task-service:latest  # Replace with your Docker Hub username and correct image path
+          ports:
+            - containerPort: 5001
+          env:
+            - name: DB_URI
+              value: "mongodb://mongo:27017/taskdb"  # MongoDB URI, update if using a different host
+            - name: JWT_SECRET
+              value: "123123123123"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: task-service
+spec:
+  type: NodePort
+  ports:
+    - port: 5001
+      targetPort: 5001
+      nodePort: 31001
+  selector:
+    app: task-service
