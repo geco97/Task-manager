@@ -106,9 +106,51 @@ A simple Task Manager application built with Node.js, Express, MongoDB, and Reac
 
 ## Docker and Kubernetes Deployment
 
+### Building and Pushing Docker Images
+
+1. **Navigate to the backend and frontend directories to build images:**
+
+   - For `auth-service`:
+
+     ```bash
+     docker build -t your-dockerhub-username/auth-service:latest ./backend/auth-service
+     ```
+
+   - For `task-service`:
+
+     ```bash
+     docker build -t your-dockerhub-username/task-service:latest ./backend/task-service
+     ```
+
+   - For `frontend`:
+
+     ```bash
+     docker build -t your-dockerhub-username/frontend:latest ./frontend
+     ```
+
+2. **Push the images to Docker Hub:**
+
+   - For `auth-service`:
+
+     ```bash
+     docker push your-dockerhub-username/auth-service:latest
+     ```
+
+   - For `task-service`:
+
+     ```bash
+     docker push your-dockerhub-username/task-service:latest
+     ```
+
+   - For `frontend`:
+
+     ```bash
+     docker push your-dockerhub-username/frontend:latest
+     ```
+
 ### Docker Compose
 
-1. **Build and run the services** using Docker Compose:
+1. **Build and run the services using Docker Compose:**
 
    ```bash
    docker-compose up --build
@@ -120,7 +162,7 @@ A simple Task Manager application built with Node.js, Express, MongoDB, and Reac
 
 1. **Create Kubernetes manifests** for `auth-service`, `task-service`, MongoDB, and frontend services.
 
-2. **Apply the configurations**:
+2. **Apply the configurations:**
 
    ```bash
    kubectl apply -f kubernetes/auth-service-deployment.yaml
