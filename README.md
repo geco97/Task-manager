@@ -33,7 +33,7 @@ A simple Task Manager application built with Node.js, Express, MongoDB, and Reac
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/task-manager.git
+   git clone https://github.com/geco97/task-manager.git
    cd task-manager
    ```
 
