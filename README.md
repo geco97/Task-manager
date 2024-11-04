@@ -134,18 +134,21 @@ A simple Task Manager application built with Node.js, Express, MongoDB, and Reac
 
      ```bash
      docker push your-dockerhub-username/auth-service:latest
+     kubectl rollout restart deployment auth-service 
      ```
 
    - For `task-service`:
 
      ```bash
      docker push your-dockerhub-username/task-service:latest
+     kubectl rollout restart deployment task-service 
      ```
 
    - For `frontend`:
 
      ```bash
      docker push your-dockerhub-username/frontend:latest
+     kubectl rollout restart deployment frontend  
      ```
 
 ### Docker Compose
