@@ -7,7 +7,7 @@ import Header from './components/Header';
 
 const App = () => {
     const [token, setToken] = useState(localStorage.getItem('token'));
-
+    
     return (
         <Router>
             <Header token={token} setToken={setToken} />

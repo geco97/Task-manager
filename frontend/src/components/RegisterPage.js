@@ -15,7 +15,7 @@ const RegisterPage = () => {
         setSuccess(null);
 
         try {
-            await register(username, password, email);
+            await register(username, email, password);
             setSuccess('Registration successful! You can now log in.');
         } catch (error) {
             setError(error.response?.data?.message || 'Registration failed.');

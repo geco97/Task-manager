@@ -113,19 +113,19 @@ A simple Task Manager application built with Node.js, Express, MongoDB, and Reac
    - For `auth-service`:
 
      ```bash
-     docker build -t your-dockerhub-username/auth-service:latest ./backend/auth-service
+     docker build -t your-dockerhub-username/auth-service:latest .
      ```
 
    - For `task-service`:
 
      ```bash
-     docker build -t your-dockerhub-username/task-service:latest ./backend/task-service
+     docker build -t your-dockerhub-username/task-service:latest .
      ```
 
    - For `frontend`:
 
      ```bash
-     docker build -t your-dockerhub-username/frontend:latest ./frontend
+     docker build -t your-dockerhub-username/frontend:latest .
      ```
 
 2. **Push the images to Docker Hub:**
